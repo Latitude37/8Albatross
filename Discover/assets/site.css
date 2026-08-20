@@ -313,22 +313,22 @@ footer{border-top:1px solid var(--line);padding:38px var(--pad) 48px;display:gri
 
 @media (max-width: 700px) {
 
-  .vignette-grid {
-    display: flex;
-    overflow-x: auto;
-    gap: 12px;
-    padding-right: 0;
-    scroll-snap-type: x mandatory;
-  }
+.vignette-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
 
-  .vignette {
-    min-width: 78vw;
-    scroll-snap-align: start;
-  }
+.vignette {
+  min-width: 0;
+}
 
-  .residence-grid {
-    gap: 70px;
-  }
+.vignette img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  display: block;
+}
 
   .lifestyle-banner {
     height: 72vh;
