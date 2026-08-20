@@ -244,20 +244,6 @@ footer{border-top:1px solid var(--line);padding:38px var(--pad) 48px;display:gri
 }
 
 
-.plan-strip {
-  display: grid;
-  grid-template-columns: .4fr 1.6fr;
-  gap: clamp(30px, 6vw, 90px);
-  max-width: var(--max);
-  margin: 0 auto;
-  padding: 0 var(--pad) clamp(100px, 12vw, 170px);
-}
-
-.plan-button {
-  margin: 0;
-}
-
-
 .lifestyle-banner {
   position: relative;
   height: min(82vh, 880px);
@@ -312,8 +298,7 @@ footer{border-top:1px solid var(--line);padding:38px var(--pad) 48px;display:gri
 
   .residence-grid,
   .residence-detail,
-  .reverse-detail,
-  .plan-strip {
+  .reverse-detail {
     grid-template-columns: 1fr;
   }
 
