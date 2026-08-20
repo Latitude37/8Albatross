@@ -24,3 +24,314 @@ footer{border-top:1px solid var(--line);padding:38px var(--pad) 48px;display:gri
 @media(max-width:720px){.nav a:not(.nav-cta){display:none}.brand{width:145px}}
 @media(max-width:640px){.hero{min-height:620px}.hero h1{font-size:50px}.hero-content{bottom:105px}.scroll-cue{left:var(--pad);right:auto}.text-section{display:block;padding-top:95px;padding-bottom:95px}.section-index{margin-bottom:42px}.residence-title{grid-template-columns:42px 1fr}.diptych{grid-template-columns:1fr}.plan-button{padding:8px}.construction,.final-image{height:78svh}.register{padding-top:95px;padding-bottom:95px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+/* ALBATROSS REVISED MIDDLE CONTENT */
+
+.project-intro {
+  display: grid;
+  grid-template-columns: 70px minmax(0, 900px);
+  gap: clamp(28px, 5vw, 80px);
+  padding: clamp(100px, 13vw, 190px) var(--pad)
+           clamp(80px, 10vw, 140px);
+  max-width: var(--max);
+  margin: 0 auto;
+}
+
+.project-intro .section-index {
+  padding-top: 7px;
+}
+
+.intro-copy h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  letter-spacing: -.035em;
+  font-size: clamp(44px, 5.4vw, 82px);
+  line-height: 1.02;
+  margin: 0 0 38px;
+}
+
+.intro-copy .lead {
+  max-width: 820px;
+}
+
+.intro-copy .quiet {
+  max-width: 660px;
+}
+
+
+.vignette-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  padding: 0 var(--pad) clamp(110px, 12vw, 180px);
+  max-width: var(--max);
+  margin: 0 auto;
+}
+
+.vignette {
+  position: relative;
+  margin: 0;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: #ddd;
+}
+
+.vignette img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.vignette::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to top,
+      rgba(15, 13, 12, .5),
+      rgba(15, 13, 12, 0) 48%
+    );
+}
+
+.vignette figcaption {
+  position: absolute;
+  left: clamp(18px, 2vw, 28px);
+  right: clamp(18px, 2vw, 28px);
+  bottom: clamp(18px, 2vw, 28px);
+  z-index: 2;
+  color: white;
+}
+
+.vignette figcaption span {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  font-size: 10px;
+  margin-bottom: 7px;
+}
+
+.vignette figcaption small {
+  display: block;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(14px, 1.1vw, 17px);
+  line-height: 1.35;
+}
+
+
+.residence-pair {
+  padding: clamp(100px, 12vw, 180px) var(--pad);
+  border-top: 1px solid var(--line);
+}
+
+.residence-heading {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto clamp(60px, 8vw, 100px);
+}
+
+.residence-heading h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  letter-spacing: -.035em;
+  font-size: clamp(50px, 6vw, 90px);
+  line-height: 1;
+  margin: 0 0 18px;
+}
+
+.residence-heading > p:last-child {
+  font-size: 16px;
+  color: rgba(35,31,32,.7);
+}
+
+.residence-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(24px, 4vw, 58px);
+  max-width: 1260px;
+  margin: 0 auto;
+}
+
+.residence-card figure {
+  margin: 0 0 24px;
+  overflow: hidden;
+}
+
+.residence-card figure img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.residence-address {
+  margin-bottom: 10px;
+}
+
+.residence-card h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  font-size: clamp(34px, 3.3vw, 52px);
+  line-height: 1;
+  margin: 0 0 18px;
+}
+
+.residence-card > p:not(.eyebrow) {
+  max-width: 520px;
+  font-size: 15px;
+  color: rgba(35,31,32,.72);
+}
+
+
+.residence-detail {
+  display: grid;
+  grid-template-columns: .7fr 1.3fr;
+  gap: clamp(40px, 7vw, 110px);
+  align-items: center;
+  padding: clamp(100px, 12vw, 180px) var(--pad);
+  max-width: var(--max);
+  margin: 0 auto;
+}
+
+.reverse-detail {
+  grid-template-columns: 1.3fr .7fr;
+}
+
+.reverse-detail .detail-copy {
+  grid-column: 2;
+}
+
+.reverse-detail .detail-image {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.detail-copy h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  letter-spacing: -.03em;
+  font-size: clamp(38px, 4.4vw, 66px);
+  line-height: 1.04;
+  margin: 0 0 26px;
+}
+
+.detail-copy > p:last-of-type {
+  max-width: 520px;
+  font-size: 16px;
+}
+
+.detail-image {
+  margin: 0;
+  overflow: hidden;
+}
+
+.detail-image img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+
+.plan-strip {
+  display: grid;
+  grid-template-columns: .4fr 1.6fr;
+  gap: clamp(30px, 6vw, 90px);
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 var(--pad) clamp(100px, 12vw, 170px);
+}
+
+.plan-button {
+  margin: 0;
+}
+
+
+.lifestyle-banner {
+  position: relative;
+  height: min(82vh, 880px);
+  min-height: 580px;
+  overflow: hidden;
+  color: white;
+}
+
+.lifestyle-banner > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lifestyle-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,.52),
+      rgba(0,0,0,.05) 60%
+    );
+}
+
+.lifestyle-copy {
+  position: absolute;
+  left: var(--pad);
+  right: var(--pad);
+  bottom: clamp(55px, 8vw, 100px);
+}
+
+.lifestyle-copy h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  letter-spacing: -.035em;
+  font-size: clamp(48px, 6vw, 92px);
+  line-height: 1;
+  margin: 0;
+}
+
+
+@media (max-width: 850px) {
+
+  .project-intro {
+    grid-template-columns: 1fr;
+  }
+
+  .project-intro .section-index {
+    margin-bottom: 15px;
+  }
+
+  .residence-grid,
+  .residence-detail,
+  .reverse-detail,
+  .plan-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .reverse-detail .detail-copy,
+  .reverse-detail .detail-image {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
+
+
+@media (max-width: 700px) {
+
+  .vignette-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 12px;
+    padding-right: 0;
+    scroll-snap-type: x mandatory;
+  }
+
+  .vignette {
+    min-width: 78vw;
+    scroll-snap-align: start;
+  }
+
+  .residence-grid {
+    gap: 70px;
+  }
+
+  .lifestyle-banner {
+    height: 72vh;
+    min-height: 540px;
+  }
+}
