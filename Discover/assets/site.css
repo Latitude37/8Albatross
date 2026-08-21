@@ -342,3 +342,14 @@ footer{border-top:1px solid var(--line);padding:38px var(--pad) 48px;display:gri
     min-height: 540px;
   }
 }
+.contact-option {
+  margin-top: 24px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.contact-option a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
